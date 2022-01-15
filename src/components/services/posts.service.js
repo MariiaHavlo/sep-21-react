@@ -1,10 +1,10 @@
 import {urls} from "../../configs/urls";
 
-const getId=(id)=>{
+const getByUserId=(id)=>{
     return fetch(`${urls.posts}/${id}`)
         .then(value => value.json())
 }
 
-export const userService={
-    getId
+export const postService={
+    getByUserId
 }

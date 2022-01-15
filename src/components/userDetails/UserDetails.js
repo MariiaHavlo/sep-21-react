@@ -1,10 +1,7 @@
 import React from 'react';
 
-const UserDetails = (props) => {
-let{id,name,username,email,address, suite,city,zipcode, phone,website}=props;
-
-
-
+const UserDetails = ({user, getUserId}) => {
+    let {id, name, username, email, address, suite, city, zipcode, phone, website} = user;
     return (
         <div>
             <div>
@@ -18,13 +15,11 @@ let{id,name,username,email,address, suite,city,zipcode, phone,website}=props;
                 <h6>{zipcode}</h6>
                 <h4>{phone}</h4>
                 <h4>{website}</h4>
+                <button onClick={() => getUserId(id)}>Posts</button>
             </div>
-
-            <button onClick={()=>{}}>Posts</button>
-
         </div>
-
     );
 };
 
 export default UserDetails;
+
