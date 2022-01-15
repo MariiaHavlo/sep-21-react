@@ -4,6 +4,7 @@ import './App.css'
 import Users from "./components/users/Users";
 import UserDetails from "./components/userDetails/UserDetails";
 import Posts from "./components/posts/Posts";
+import css from './app.module.css';
 
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
 
     return (
         <div>
-            <div>
+            <div className={css.wrap}>
                 <Users getUser={getUser}/>
                 {user && <UserDetails user={user} getUserId={getUserId}/>}
             </div>
