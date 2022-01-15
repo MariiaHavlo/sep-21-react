@@ -14,6 +14,7 @@ const App = () => {
 
     const getUser = (user) => {
         setUser(user)
+        setUserId(null)
     }
     const getUserId=(id)=>{
         setUserId(id)
