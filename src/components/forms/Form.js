@@ -18,7 +18,7 @@ const Form = ({getFilter}) => {
                 <label>Name <input type="text" name={'name'} value={form.name} onChange={formHandler}/></label>
                 <label>Username <input type="text" name={'username'} value={form.username} onChange={formHandler}/></label>
                 <label>email <input type="text" name={'email'} value={form.email} onChange={formHandler}/></label>
-                <button onClick={()=>onSubmit}>Filter</button>
+                <button onClick={onSubmit}>Filter</button>
             </form>
 
         </div>
