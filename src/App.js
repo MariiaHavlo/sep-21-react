@@ -19,8 +19,6 @@ const App = () => {
 
     }, [])
 
-
-
     const getFilter=(info)=>{
         let filterArr=[...users];
         if (info.name){
