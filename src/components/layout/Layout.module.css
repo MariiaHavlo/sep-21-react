@@ -13,3 +13,7 @@
     color: black;
 
 }
+.header a[class='active']{
+    text-decoration: underline;
+    color: teal;
+}
