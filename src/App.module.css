@@ -1,0 +1,15 @@
+.header{
+    min-height: 100px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+
+}
+.header a{
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+
+}
