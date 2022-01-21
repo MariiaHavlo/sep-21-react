@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useParams} from "react-router-dom";
+import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 import {userService} from "../../services/user.service";
 
 const SingleUserPage = () => {
@@ -27,6 +27,8 @@ const SingleUserPage = () => {
                     <div>Phone:{user.phone}</div>
                 </div>
             )}
+            <Link to={id.toString()} state={user}><button>Get User Posts</button></Link>
+            <div><Outlet/></div>
         </div>
     );
 };

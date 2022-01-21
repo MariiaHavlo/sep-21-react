@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useLocation, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+
 import {PostService} from "../../services/post.service";
+
 
 
 const SinglePostPage = () => {
@@ -14,7 +18,7 @@ const SinglePostPage = () => {
             return
         }
         PostService.getById(id).then(value => setPost({...value}))
-    })
+    },[id])
     return (
         <div>
             {post && (
@@ -25,7 +29,11 @@ const SinglePostPage = () => {
                     <div>Body:{post.body}</div>
                 </div>
 
+
             )}
+           <Link to={id.toString()} state={post}><button>Comments</button></Link>
+
+            <div><Outlet/></div>
         </div>
     );
 };

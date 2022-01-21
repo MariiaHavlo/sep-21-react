@@ -10,13 +10,16 @@ const UsersPage = () => {
 
     useEffect(()=>{
         userService.getAll().then(value => setUsers([...value]))
-    })
+    },[])
     return (
         <div>
             <div className={css.userInfo}>
                 <div>
                     <h3>Users</h3>
-                    {users.map(user=><User key={user.id} user={user}/> )}
+                    <div className={css.user}>
+                        {users.map(user=><User key={user.id} user={user}/> )}
+                    </div>
+
                 </div>
 
                 <div><Outlet/></div>
