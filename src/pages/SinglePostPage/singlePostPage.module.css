@@ -1,0 +1,10 @@
+.posts{
+    width: 300px;
+    padding: 20px;
+    border: .5px solid black;
+    border-radius: 5px;
+}
+.posts.h3{
+    font-size: medium;
+    color:white;
+}

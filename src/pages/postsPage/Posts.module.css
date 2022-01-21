@@ -1,4 +1,6 @@
 .postsInfo{
     display: flex;
 justify-content: space-around;
+    background: #01bebe;
+
 }

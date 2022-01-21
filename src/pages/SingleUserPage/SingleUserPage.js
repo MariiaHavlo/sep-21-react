@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Link, Outlet, useLocation, useParams} from "react-router-dom";
+
 import {userService} from "../../services/user.service";
+import css from "./singleUserPage.module.css";
 
 const SingleUserPage = () => {
     const{id}=useParams()
@@ -17,14 +19,14 @@ const SingleUserPage = () => {
     return (
         <div>
             {user &&(
-                <div>
-                    <div>Id:{user.id}</div>
-                    <div>Name:{user.name}</div>
-                    <div>Username:{user.username}</div>
-                    <div>Email:{user.email}</div>
-                    <div>Street:{user.address.street}</div>
-                    <div>City:{user.address.city}</div>
-                    <div>Phone:{user.phone}</div>
+                <div className={css.userDetails}>
+                    <h3>Id:{user.id}</h3>
+                    <h3>Name:{user.name}</h3>
+                    <h3>Username:{user.username}</h3>
+                    <h3>Email:{user.email}</h3>
+                    <h3>Street:{user.address.street}</h3>
+                    <h3>City:{user.address.city}</h3>
+                    <h3>Phone:{user.phone}</h3>
                 </div>
             )}
             <Link to={id.toString()} state={user}><button>Get User Posts</button></Link>

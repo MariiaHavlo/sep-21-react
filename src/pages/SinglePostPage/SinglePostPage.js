@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {Outlet} from "react-router-dom";
 
 import {PostService} from "../../services/post.service";
+import css from "./singlePostPage.module.css";
 
 
 
@@ -22,7 +23,7 @@ const SinglePostPage = () => {
     return (
         <div>
             {post && (
-                <div>
+                <div className={css.posts}>
                     <div>Id:{post.id}</div>
                     <div>UserId:{post.userId}</div>
                     <div>Title:{post.title}</div>
