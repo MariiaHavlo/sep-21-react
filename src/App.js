@@ -11,6 +11,8 @@ import SinglePostPage from "./pages/SinglePostPage/SinglePostPage";
 import SingleUserPage from "./pages/SingleUserPage/SingleUserPage";
 import PostCommentsPage from "./pages/postCommentsPage/PostCommentsPage";
 import UserPostsPage from "./pages/userPostsPage/UserPostsPage";
+import SingleAlbumsPage from "./pages/singleAlbumsPage/SingleAlbumsPage";
+import PhotosPage from "./pages/photosPage/PhotosPage";
 
 const App = () => {
     return (
@@ -22,9 +24,16 @@ const App = () => {
                     <Route index element={<HomePage/>} />
 
                     <Route path={'users'} element={<UsersPage/>} >
+
                         <Route path={':id'} element={<SingleUserPage/>} >
                             <Route path={':posts'} element={<UserPostsPage/>}/>
                         </Route>
+
+                        <Route path={':id/albums'} element={<SingleAlbumsPage/>}>
+                            <Route path={':albumId/photos'} element={<PhotosPage/>}/>
+
+                        </Route>
+
                     </Route>
 
                     <Route path={'posts'} element={<PostsPage/>}>
