@@ -7,6 +7,7 @@ const Item = ({item:{id,name}}) => {
     return (
         <div>
             {name}
+
             <button onClick={()=>dispatch(deleteTodo({id}))}>Delete</button>
         </div>
     );

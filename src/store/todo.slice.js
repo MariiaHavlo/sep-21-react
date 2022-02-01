@@ -8,12 +8,12 @@ const todoSlice = createSlice({
     reducers:{
         createTodo:(state,action)=>{
 state.items.push({
-    id.new Date.getTime(),
+    id:new Date().getTime(),
     ...action.payload.data
 })
         },
         deleteTodo:(state,action)=>{
-state.items  = state.items.filter(item = item.id !== action.payload.id)
+state.items  = state.items.filter(item => item.id !== action.payload.id)
         }
     }
 });
