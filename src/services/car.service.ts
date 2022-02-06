@@ -4,5 +4,5 @@ import {urls} from "../constans";
 
 export const carService = {
     getAll:()=>axiosService.get<ICar[]>(urls.cars),
-    create:(car:ICar) =>axiosService.post<ICar>(urls.cars)
+    create:(car:ICar) =>axiosService.post<ICar>(urls.cars,car)
 }

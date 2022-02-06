@@ -20,9 +20,9 @@ export const getAllCars = createAsyncThunk(
     }
 )
 
-export const addCarThunk = createAsyncThunk<void,{car:ICar}>(
+export const addCarThunk = createAsyncThunk<any,any>(
   'carSlice/addCarThunk',
-  async ({car},{dispatch})=>{
+  async (car,{dispatch})=>{
       const{data} = await carService.create(car);
       dispatch(addCar({car:data}))
   }
